@@ -32,3 +32,5 @@ print(wyn)
 wyn = Sample(1, 2, 3, 4)
 print(wyn)
 print(repr(wyn))
+
+# 11:30
