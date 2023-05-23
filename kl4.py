@@ -11,6 +11,15 @@ class ContactList(list['Contact']):
         return matching_contacts
 
 
+class LongestKeyDisct(dict):
+    def longest_key(self):
+        longest = None
+        for key in self:
+            if longest is None or len(key) > len(longest):
+                longest = key
+        return longest
+
+
 class Contact:
     all_contacts = ContactList()
 
@@ -36,8 +45,8 @@ class Friend(Suplier, Contact):
         self.phone = phone
 
     # przy wielodziedziczeniu, mozna wskazac z której klasy ma byc uzyta metoda
-    def order(self, order):
-        super(Suplier, self).order()
+    # def order(self, order):
+    #     super(Suplier, self).order()
 
     def __repr__(self):
         return f'{self.name!r}, {self.email!r}, +48 {self.phone!r}'
@@ -55,3 +64,11 @@ print(Friend.__mro__)
 f = Friend("JArek", "jarek@wp.pl", "567456789")
 print(c1.all_contacts)
 f.order("ciatko")
+
+art = LongestKeyDisct()
+art['tomasz'] = 12
+art['Abraham'] = 122
+art['zen'] = 1
+# Abraham
+print(art.longest_key())
+print(art)
