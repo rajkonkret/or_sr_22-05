@@ -45,8 +45,9 @@ class Friend(Suplier, Contact):
         self.phone = phone
 
     # przy wielodziedziczeniu, mozna wskazac z której klasy ma byc uzyta metoda
-    # def order(self, order):
-    #     super(Suplier, self).order()
+    def order(self, order):
+        # super(Friend, self).order(order)
+        Suplier.order(self, order)
 
     def __repr__(self):
         return f'{self.name!r}, {self.email!r}, +48 {self.phone!r}'
