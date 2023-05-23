@@ -49,4 +49,5 @@ b.drukuj()
 c = BoundedCounter.from_other(b)  # <class '__main__.BoundedCounter'>
 
 c.drukuj()
-print(type(c))
+print(type(c))  # <class '__main__.BoundedCounter'>
+# 13:30
