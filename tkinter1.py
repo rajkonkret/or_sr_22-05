@@ -7,7 +7,7 @@ def on_click():
 
 app = tk.Tk()
 app.title("Przykład 1")
-# rozmiar okienka
+# rozmiar okien
 app.geometry("800x600")
 button = tk.Button(app, text="Kliknij mnie!", command=on_click)
 
